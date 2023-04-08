@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root{
+    --linear-gradient: linear-gradient(90deg,#F6F54D,#FEB139,#F55353);
+
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--linear-gradient);
+    color: #D1D5DB;
+}
+
+#calculator {
+    background-color: #262626;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    /* boxshadow adiciona uma sombra ao redor*/
+    box-shadow: 0.624rem 0.624rem 0.624rem rgba(0, 0, 0, 0.323);
+    display: flex;
+    flex-direction: column;
+    gap: 1.56rem;
+}
+
+#calculator h2{
+    font-size: 30px;
+    /* o relative permite add a linha em baixo*/
+    position: relative;
+}
+
+#calculator h2::before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 150px;
+    background: var(--linear-gradient);
+    bottom: 5px;
+
+}
+
+#input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.56rem;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-field label {
+    font-size: 15px;
+    color: #C8CED6;
+    font-weight: 500;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #F55353;
+    color: #FFF;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* o focus outline none faz com que ao clicarmos na caixa de imput nao apareça aquela borda de seleçao*/ 
+.input-field input:focus {
+    outline: none;
+
+}
+
+#result {
+    text-align: center;
+}
+
+#total {
+    font-size: 2.5rem;
+}
+
+.botoes{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.botoes_filho {
+    background: var(--linear-gradient);
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
